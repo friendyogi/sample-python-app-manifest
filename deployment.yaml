@@ -18,8 +18,8 @@ spec:
       containers:
       - env:
         - name: APP_VERSION
-          value: 2d7c715
-        image: 358692991475.dkr.ecr.us-east-1.amazonaws.com/gitops-yogesh-sample-app:2d7c715
+          value: 4cf87ed
+        image: 358692991475.dkr.ecr.us-east-1.amazonaws.com/gitops-yogesh-sample-app:4cf87ed
         name: demo
         ports:
         - containerPort: 80
