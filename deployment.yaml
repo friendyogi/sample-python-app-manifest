@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: gitops-demo
+  name: gitops-demo-app
+  namespace: gitops-yogesh
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: gitops-demo
+  template:
+    metadata:
+      labels:
+        app: gitops-demo
+    spec:
+      containers:
+      - env:
+        - name: APP_VERSION
+          value: 22a15db
+        image: 358692991475.dkr.ecr.us-east-1.amazonaws.com/gitops-yogesh-sample-app:22a15db
+        name: demo
+        ports:
+        - containerPort: 80
